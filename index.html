@@ -17,11 +17,9 @@
     </header>
 
     <main class="container content">
-        <!-- Első sor: 2 oszlop -->
         <section class="row row-2">
             <article class="card">
                 <div class="card-media" aria-hidden="true">
-                    <!-- sample icon: lightning -->
                     <svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M13 2L3 14h7l-1 8L21 10h-7l-1-8z" fill="currentColor"/>
                     </svg>
@@ -33,7 +31,6 @@
 
             <article class="card">
                 <div class="card-media" aria-hidden="true">
-                    <!-- sample icon: sparkles -->
                     <svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M12 2l1.9 4.1L18 8l-4.1 1.9L12 14l-1.9-4.1L6 8l4.1-1.9L12 2z" fill="currentColor"/>
                     </svg>
@@ -44,11 +41,9 @@
             </article>
         </section>
 
-        <!-- Második sor: 1 középre rendezett -->
         <section class="row row-1 center">
             <article class="card highlight">
                 <div class="card-media" aria-hidden="true">
-                    <!-- sample icon: star -->
                     <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M12 .587l3.668 7.431L24 9.748l-6 5.845 1.417 8.27L12 19.771 4.583 23.863 6 15.593 0 9.748l8.332-1.73L12 .587z" fill="currentColor"/>
                     </svg>
@@ -59,11 +54,9 @@
             </article>
         </section>
 
-        <!-- Harmadik sor: 2 oszlop -->
         <section class="row row-2">
             <article class="card">
                 <div class="card-media" aria-hidden="true">
-                    <!-- sample icon: clipboard -->
                     <svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M9 2h6v2h3v18H6V4h3V2z" fill="currentColor"/>
                     </svg>
@@ -75,7 +68,6 @@
 
             <article class="card">
                 <div class="card-media" aria-hidden="true">
-                    <!-- sample icon: chat -->
                     <svg class="icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M4 4h16v10H6l-2 2V4z" fill="currentColor"/>
                     </svg>
@@ -86,7 +78,6 @@
             </article>
         </section>
 
-        <!-- Negyedik sor: 3 oszlop -->
         <section class="row row-3">
             <article class="card small">
                 <div class="card-media" aria-hidden="true">
@@ -124,7 +115,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const cards = document.querySelectorAll('.card');
-            // staggered transition delay
             cards.forEach((c, i) => c.style.transitionDelay = (i * 60) + 'ms');
 
             const io = new IntersectionObserver((entries) => {
@@ -135,7 +125,6 @@
 
             cards.forEach(c => io.observe(c));
 
-            // simple ripple for buttons
             document.querySelectorAll('.btn').forEach(btn => {
                 btn.addEventListener('click', function (e) {
                     const r = document.createElement('span');
